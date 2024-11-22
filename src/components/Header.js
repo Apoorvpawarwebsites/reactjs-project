@@ -17,7 +17,7 @@ const Header = () => {
                 </div>
 
                 <div className="header-image">
-                    <img src="./Jony.png" alt="Jony" />
+                    <img src="./image/Jony.png" alt="Jony" />
                 </div>
 
             </div>
