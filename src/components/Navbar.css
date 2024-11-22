@@ -1,0 +1,156 @@
+.navbar{
+    background-color: #3a2b2b;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-container{
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo{
+    color: #d2a373;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.menu-icon{
+
+    font-size: 24px;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+}
+
+.nav-links{
+
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.nav-links li{
+
+    color: #d2a373;
+    cursor: pointer;
+    font-size: 16px;
+    position: relative;
+    transition:  color 0.3s ease-in-out;
+}
+
+.nav-links li:hover{
+    color: #fff;
+}
+
+
+.nav-links li::after{
+
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    background-color: #d2a373;
+    height: 2px;
+    transition:  width 0.3s ease-in-out;
+}
+
+.nav-links li:hover::after{
+    width: 100%;
+}
+
+
+.talk{
+    background-color: #533a35;
+    border: 1px solid #d2a373;
+    color: #d2a373;
+    padding: 8px 16px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 4px;
+
+}
+
+.talk:hover{
+    background-color: #d2a373;
+    color: #533a35;
+}
+
+.dropdown{
+    position: relative;
+}
+
+.dropdown-menu{
+    position: absolute;
+    top: 30px;
+    left: 0;
+    background-color: #fff;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    z-index: 10;
+}
+
+.dropdown-menu li{
+    color: #533a35;
+    padding: 5px 10px;
+    white-space: nowrap;
+}
+
+.dropdown-menu li:hover{
+
+
+    background-color: #d4a373;
+    color: #fff;
+}
+
+.dropdown-icon{
+
+
+    margin-left: 5px;
+    font-size: 12px;
+}
+
+
+@media (max-width:768px) {
+    .menu-icon{
+
+        display: block;
+    }
+
+    .nav-links{
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        background-color:#3a2b2b ;
+        width: 100%;
+        padding: 20px 0;
+        gap: 10px;
+        box-shadow:  0 2px 5px rgba(0, 0, 0, 0.2);
+        z-index: 9999;
+    }
+
+
+    .nav-links.active{
+
+        display: flex;
+    }
+
+    .talk{
+        margin-top: 10px;
+        width: fit-content;
+        align-self: center;
+    }
+    
+}
